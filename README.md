@@ -10,13 +10,20 @@
   <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
+
 </p>
 
 > Generating Images Using GAN (Dogs, Cats..) w/ Pytorch
 
 ### 🏠 [Homepage](https://github.com/myoons/GAN-pytorch/blob/master/README.md)
 
-### ✨ [Demo](https://ainote.tistory.com/)
+### ✨ [Description](https://ainote.tistory.com/5)
+
+## [Data](https://www.kaggle.com/prasunroy/natural-images)
+
+Store images as data/{--object}/imageSequence/00001.png  
+object is an argument that the GAN Network will generate.  
+List of Objects = [airplane, car, cat , dog, flower, fruit, motorbike, person] / Default : dog
 
 ## Prerequisites
 
@@ -52,5 +59,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+## References
+1. Dataset (https://www.kaggle.com/prasunroy/natural-images)
+2. Paper (https://arxiv.org/pdf/1406.2661.pdf)
+3. Basecode (https://github.com/eriklindernoren/PyTorch-GAN)

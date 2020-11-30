@@ -16,8 +16,10 @@ def train(args, device, dataloader, criterion, generator, discriminator, optimiz
 
     experiment_time = datetime.today().strftime("%Y%m%d_%H_%M")
     result_dir = 'images/{}'.format(experiment_time)
+    model_dir = 'trained_models/{}'.format(experiment_time)
+
     os.makedirs(result_dir, exist_ok=False)
-    print(experiment_time)
+    os.makedirs(model_dir, exist_ok=False)
 
     for epoch in range(args.n_epochs):
         for idx, data in enumerate(dataloader):
@@ -75,9 +77,8 @@ def train(args, device, dataloader, criterion, generator, discriminator, optimiz
     print('Everything Done.. Saving Model')
 
     # Setting the Path to save model
-    PATH_base = './trained_models/{}'.format(experiment_time)
-    PATH_G = PATH_base + '/generator.pth'
-    PATH_D = PATH_base + '/discriminator.pth'
+    PATH_G = model_dir + '/generator.pth'
+    PATH_D = model_dir + '/discriminator.pth'
 
     # Save Both Generator & Discriminator
     torch.save(generator.state_dict(), PATH_G)
