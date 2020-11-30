@@ -9,7 +9,7 @@ from torchvision import datasets
 
 def set_dataloader(args):
 
-    dataset = datasets.ImageFolder(root='./data',
+    dataset = datasets.ImageFolder(root='./image_dog',
                                             transform=transforms.Compose([
                                             transforms.Resize((args.img_size, args.img_size)),
                                             transforms.ToTensor(),

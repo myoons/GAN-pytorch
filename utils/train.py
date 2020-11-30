@@ -9,13 +9,15 @@ from torch.autograd import Variable
 import torchvision
 from torchvision.utils import save_image
 
-# time
-import time
+# datetime
+from datetime import datetime
 
 def train(args, device, dataloader, criterion, generator, discriminator, optimizer_G, optimizer_D, Tensor):
 
-    os.makedirs('images', exist_ok=True)
-    experiment_time = time.time()
+    experiment_time = datetime.today().strftime("%Y%m%d_%H_%M")
+    result_dir = 'images/{}'.format(experiment_time)
+    os.makedirs(result_dir, exist_ok=False)
+    print(experiment_time)
 
     for epoch in range(args.n_epochs):
         for idx, data in enumerate(dataloader):
@@ -68,12 +70,12 @@ def train(args, device, dataloader, criterion, generator, discriminator, optimiz
 
             if batches_done % args.sample_interval == 0:
                 print('Save sample Image')
-                save_image(gen_images.data[:25], 'images/{}/{:d}.png'.format(experiment_time, batches_done), nrow=5, normalize=True)
+                save_image(gen_images.data[:25], '{}/{:d}.png'.format(result_dir, batches_done), nrow=5, normalize=True)
     
     print('Everything Done.. Saving Model')
 
     # Setting the Path to save model
-    PATH_base = './{}'.format(time.time())
+    PATH_base = './trained_models/{}'.format(experiment_time)
     PATH_G = PATH_base + '/generator.pth'
     PATH_D = PATH_base + '/discriminator.pth'
 
