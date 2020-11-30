@@ -1,17 +1,14 @@
 <h1 align="center">Welcome to GAN-Pytorch 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/python-%3E%3D3.7-blue.svg" />
-  <img src="https://img.shields.io/badge/pytorch-%3E%3D1.6.0-blue.svg" />
-  <img src="https://img.shields.io/badge/torchvision-%3E%3D0.7.0-blue.svg" />
+  <img src="https://img.shields.io/badge/python-%3E%3D3.7-orange.svg" />
+  <img src="https://img.shields.io/badge/pytorch-%3E%3D1.6.0-orange.svg" />
+  <img src="https://img.shields.io/badge/torchvision-%3E%3D0.7.0-orange.svg" />
   <a href="https://ainote.tistory.com/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: Myoons" src="https://img.shields.io/github/license/myoons/GAN-Pytorch" />
   </a>
 </p>
 
